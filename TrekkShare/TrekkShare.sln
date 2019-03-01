@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrekkShare.App", "TrekkShare.App\TrekkShare.App.csproj", "{53BAD9C1-D980-469B-9906-0F36A58BE583}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrekkShare.Models", "TrekkShare.Models\TrekkShare.Models.csproj", "{6FD42077-D686-40FF-ACCD-89D4689CBBBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrekkShare.Data", "TrekkShare.Data\TrekkShare.Data.csproj", "{65BC3842-098E-4ADF-B0AF-29029119355C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrekkShare.Services", "TrekkShare.Services\TrekkShare.Services.csproj", "{E95F4321-184E-47CF-B213-EABDD8C52395}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53BAD9C1-D980-469B-9906-0F36A58BE583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53BAD9C1-D980-469B-9906-0F36A58BE583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53BAD9C1-D980-469B-9906-0F36A58BE583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53BAD9C1-D980-469B-9906-0F36A58BE583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD42077-D686-40FF-ACCD-89D4689CBBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD42077-D686-40FF-ACCD-89D4689CBBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD42077-D686-40FF-ACCD-89D4689CBBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD42077-D686-40FF-ACCD-89D4689CBBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BC3842-098E-4ADF-B0AF-29029119355C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BC3842-098E-4ADF-B0AF-29029119355C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BC3842-098E-4ADF-B0AF-29029119355C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BC3842-098E-4ADF-B0AF-29029119355C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E95F4321-184E-47CF-B213-EABDD8C52395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E95F4321-184E-47CF-B213-EABDD8C52395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E95F4321-184E-47CF-B213-EABDD8C52395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E95F4321-184E-47CF-B213-EABDD8C52395}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93D6F58A-5A19-4403-8300-E876FEF8330A}
+	EndGlobalSection
+EndGlobal
