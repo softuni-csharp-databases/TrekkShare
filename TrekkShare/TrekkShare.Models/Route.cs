@@ -9,7 +9,7 @@
         [Key]
         public int RouteId { get; set; }
 
-        //[ForeignKey("Mountain)]
+        //[ForeignKey("Mountain")]
         [Required]
         public int MountainId { get; set; }
 
