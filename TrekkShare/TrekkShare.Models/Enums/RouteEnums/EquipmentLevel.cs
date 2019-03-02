@@ -3,10 +3,16 @@
     public enum EquipmentLevel
     {
         /// <summary>
-        /// Equipment for rough terrain conditions
+        /// Equipment for rough terrain conditions.
         /// </summary>
         RoughTerrain,
-        Rainy,
+
+        /// <summary>
+        /// Fierce weather conditions.
+        /// </summary>
+        HarshWeather,
+
+        // TODO: Add more.
 
     }
 }
