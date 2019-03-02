@@ -1,5 +1,6 @@
 ﻿namespace TrekkShare.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -22,11 +23,8 @@
         [Required]
         public Route Route { get; set; }
 
-        /// <summary>
-        ///  Продължителност в дни.
-        /// </summary>
         [Required]
-        public int Length { get; set; }
+        public TimeSpan Length { get; set; }
 
         [Required]
         public int NightsCount { get; set; }
