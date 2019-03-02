@@ -1,0 +1,37 @@
+﻿namespace TrekkShare.Models
+{
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using TrekkShareClasses;
+
+    [Table("Mountains")]
+    public class Mountain
+    {
+        public Mountain()
+        {
+            this.Peaks = new HashSet<Peak>();
+            this.Rivers = new HashSet<River>();
+            this.Cottages = new HashSet<Cottage>();
+        }
+
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        public double Altitude { get; set; }
+
+        //public int HighestPeakId { get; set; }
+        //public Peak HighestPeak { get; set; }
+
+        //public int CountryId { get; set; }
+        //public Country Country { get; set; }
+
+        public ICollection<Peak> Peaks { get; set; }
+        public ICollection<River> Rivers { get; set; }
+        public ICollection<Cottage> Cottages { get; set; }
+    }
+}
