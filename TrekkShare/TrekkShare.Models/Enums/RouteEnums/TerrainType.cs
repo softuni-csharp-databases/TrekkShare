@@ -27,6 +27,7 @@ namespace TrekkShare.Models.Enums.RouteEnums
         /// Also called a dale or a depression, a valley is bigger in length than it is in its width. 
         /// </summary>
         Valley,
+
         /// <summary>
         /// Hills are pieces of land that rise to a peak and are above sea level. 
         /// They are similar to mountains except they are lower and not nearly as steep. 
