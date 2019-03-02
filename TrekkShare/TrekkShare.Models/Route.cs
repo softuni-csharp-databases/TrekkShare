@@ -9,9 +9,11 @@
         [Key]
         public int RouteId { get; set; }
 
-        //[ForeignKey("Mountain")]
         [Required]
         public int MountainId { get; set; }
+
+        //[ForeignKey(nameof(Mountain))]
+        //public Mountain Mountain { get; set; }
 
         [Required]
         public double Length { get; set; }
