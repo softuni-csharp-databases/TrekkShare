@@ -3,18 +3,23 @@
     using Microsoft.EntityFrameworkCore;
 
     using EntityConfiguration;
+    using TrekkShare.Models;
 
     public class TrekkShareContext : DbContext
     {
         public TrekkShareContext()
         {
-            
+
         }
 
-        public TrekkShareContext(DbContextOptions options) 
+        public TrekkShareContext(DbContextOptions options)
             : base(options)
         {
         }
+
+        public DbSet<Route> Routes { get; set; }
+
+        public DbSet<Trip> Trips { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
