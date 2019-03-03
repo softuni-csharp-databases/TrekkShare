@@ -10,6 +10,7 @@
             this.Peaks = new HashSet<Peak>();
             this.Rivers = new HashSet<River>();
             this.Cottages = new HashSet<Cottage>();
+            this.Routes = new HashSet<Route>();
         }
 
         [Key]
@@ -30,5 +31,6 @@
         public ICollection<Peak> Peaks { get; set; }
         public ICollection<River> Rivers { get; set; }
         public ICollection<Cottage> Cottages { get; set; }
+        public ICollection<Route> Routes { get; set; }
     }
 }
