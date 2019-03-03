@@ -12,7 +12,6 @@
 
         [Required]
         public int MunicipalityId { get; set; }
-
         public Municipality Municipality { get; set; }
     }
 }
