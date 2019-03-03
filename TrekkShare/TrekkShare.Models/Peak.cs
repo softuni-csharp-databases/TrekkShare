@@ -18,6 +18,8 @@ namespace TrekkShare.Models
         public int MountainId { get; set; }
         public Mountain Mountain { get; set; }
 
+        public Mountain HighestPeakMountain { get; set; }
+
         public int CountryId { get; set; }
         public Country Country { get; set; }
     }
