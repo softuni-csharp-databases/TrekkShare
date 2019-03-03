@@ -12,7 +12,7 @@
         {
             builder.HasOne(x => x.Mountain)
                 .WithMany(x => x.Routes)
-                .HasForeignKey<Mountain>(x => x.MountainId);
+                .HasForeignKey(x => x.MountainId);
         }
     }
 }
