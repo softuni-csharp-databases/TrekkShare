@@ -3,7 +3,6 @@
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    [Table("Provinces")]
     public class Province
     {
         public Province()
