@@ -4,7 +4,6 @@ namespace TrekkShare.Models
 {
     public class CaveCharacteristic
     {
-        [Key]
         public int Id { get; set; }
 
         public int Temperature { get; set; }
@@ -14,6 +13,5 @@ namespace TrekkShare.Models
         public double Length { get; set; }
 
         public double Depth { get; set; }
-
     }
 }
