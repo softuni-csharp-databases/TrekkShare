@@ -21,11 +21,11 @@
 
         public double Altitude { get; set; }
 
-        //public int HighestPeakId { get; set; }
-        //public Peak HighestPeak { get; set; }
+        public int HighestPeakId { get; set; }
+        public Peak HighestPeak { get; set; }
 
-        //public int CountryId { get; set; }
-        //public Country Country { get; set; }
+        public int CountryId { get; set; }
+        public Country Country { get; set; }
 
         public ICollection<Peak> Peaks { get; set; }
         public ICollection<River> Rivers { get; set; }
