@@ -30,5 +30,7 @@
 
         [ForeignKey(nameof(CountryId))]
         public int CountryId { get; set; }
+
+        //OPTIONAL: kayak trips, boat trips
     }
 }
