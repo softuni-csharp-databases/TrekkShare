@@ -10,7 +10,6 @@
         [Required]
         public string Name { get; set; }
 
-        [Required]
         public int Length { get; set; }
 
         public int Elevation { get; set; }

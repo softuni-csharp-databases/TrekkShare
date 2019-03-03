@@ -19,7 +19,6 @@
         [Required]
         public string Name { get; set; }
 
-        [Required]
         public double Altitude { get; set; }
 
         //public int HighestPeakId { get; set; }

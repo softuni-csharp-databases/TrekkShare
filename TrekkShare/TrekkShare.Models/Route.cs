@@ -9,14 +9,11 @@
         [Key]
         public int RouteId { get; set; }
 
-        [Required]
         public int MountainId { get; set; }
         public Mountain Mountain { get; set; }
 
-        [Required]
         public double Length { get; set; }
         
-        [Required]
         public double Denivelation { get; set; }
 
         [Required]
