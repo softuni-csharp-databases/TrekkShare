@@ -3,9 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
 
-    [Table("Trips")]
     public class Trip
     {
         public Trip()
@@ -17,10 +15,7 @@
         public int TripId { get; set; }
 
         [Required]
-        public int RouteId { get; set; }
-
-        [ForeignKey(nameof(RouteId))]
-        [Required]
+        public int RouteId { get; set; }      
         public Route Route { get; set; }
 
         [Required]
@@ -42,8 +37,10 @@
         //public Guide Guide { get; set; }
 
         // Място за нощувка. NULLABLE ако преходът е еднодневен.
-        //public Cottage Cottage { get; set; }
+        [Required]
+        public int CottageId { get; set; }
+        public Cottage Cottage { get; set; }
 
-        public HashSet<User> Users { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }
