@@ -37,7 +37,9 @@
         //public Guide Guide { get; set; }
 
         // Място за нощувка. NULLABLE ако преходът е еднодневен.
-        //public Cottage Cottage { get; set; }
+        [Required]
+        public int CottageId { get; set; }
+        public Cottage Cottage { get; set; }
 
         public ICollection<User> Users { get; set; }
     }
