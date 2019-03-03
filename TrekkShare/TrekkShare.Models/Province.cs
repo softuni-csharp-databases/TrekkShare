@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Province
     {
@@ -14,9 +15,8 @@
         public int ProvinceId { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [Column(TypeName = "nvarchar(75)")]
         public string Name { get; set; }
-
 
         public HashSet<Municipality> Municipalities { get; set; }
     }
