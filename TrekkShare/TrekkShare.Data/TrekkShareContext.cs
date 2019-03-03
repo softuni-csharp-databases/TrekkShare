@@ -47,6 +47,10 @@ namespace TrekkShare.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfig());
+            modelBuilder.ApplyConfiguration(new MountainConfig());
+            modelBuilder.ApplyConfiguration(new RouteConfig());
+            modelBuilder.ApplyConfiguration(new TouristTripConfig());
+            modelBuilder.ApplyConfiguration(new PeakConfig());
         }
     }
 }

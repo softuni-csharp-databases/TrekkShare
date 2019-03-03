@@ -12,8 +12,9 @@ namespace TrekkShare.Data.EntityConfiguration
         public void Configure(EntityTypeBuilder<Mountain> builder)
         {
             builder.HasOne(x => x.HighestPeak)
-                .WithOne(x => x.Mountain)
-                .HasForeignKey<Mountain>(x => x.HighestPeakId);
+                .WithOne(x => x.HighestPeakMountain)
+                .HasForeignKey<Mountain>(x => x.HighestPeakId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
