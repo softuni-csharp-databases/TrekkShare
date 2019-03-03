@@ -19,6 +19,6 @@
         public int CountryId { get; set; }
         public Country Country { get; set; }
 
-        public HashSet<Town> Towns { get; set; }
+        public ICollection<Town> Towns { get; set; }
     }
 }

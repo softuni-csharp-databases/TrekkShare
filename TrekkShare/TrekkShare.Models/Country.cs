@@ -16,6 +16,6 @@
         [Required]
         public string Name { get; set; }
 
-        public HashSet<Municipality> Municipalities { get; set; }
+        public ICollection<Municipality> Municipalities { get; set; }
     }
 }
