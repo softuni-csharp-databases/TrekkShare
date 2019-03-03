@@ -11,7 +11,7 @@
 
         [Required]
         public int MountainId { get; set; }
-        //public Mountain Mountain { get; set; }
+        public Mountain Mountain { get; set; }
 
         [Required]
         public double Length { get; set; }
