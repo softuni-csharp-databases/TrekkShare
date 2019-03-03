@@ -15,7 +15,7 @@
         public int TripId { get; set; }
 
         [Required]
-        public int RouteId { get; set; }      
+        public int RouteId { get; set; }
         public Route Route { get; set; }
 
         [Required]
@@ -37,8 +37,7 @@
         //public Guide Guide { get; set; }
 
         // Място за нощувка. NULLABLE ако преходът е еднодневен.
-        [Required]
-        public int CottageId { get; set; }
+        public int? CottageId { get; set; }
         public Cottage Cottage { get; set; }
 
         public ICollection<User> Users { get; set; }
