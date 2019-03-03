@@ -1,11 +1,9 @@
 ﻿namespace TrekkShare.Models
 {
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
 
     using TrekkShare.Models.Enums.RouteEnums;
-
-    [Table("Routes")]
+    
     public class Route
     {
         [Key]
@@ -13,8 +11,6 @@
 
         [Required]
         public int MountainId { get; set; }
-
-        //[ForeignKey(nameof(Mountain))]
         //public Mountain Mountain { get; set; }
 
         [Required]
