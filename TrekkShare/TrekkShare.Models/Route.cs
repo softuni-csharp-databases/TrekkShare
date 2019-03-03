@@ -37,7 +37,7 @@
 
         public double Distance => CalculateDistanceInMeters(StartLatitude, StartLongitude,
            EndLatitude, EndLongitude);
-        
+
         private double CalculateDistanceInMeters (double lat1, double lon1,
            double lat2, double lon2)
         {
