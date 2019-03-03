@@ -15,6 +15,8 @@
         public int UserId { get; set; }
         public User User { get; set; }
 
+        public string Description { get; set; }
+
         public Experience Experience { get; set; }
 
         public int TripsCount { get; set; }
