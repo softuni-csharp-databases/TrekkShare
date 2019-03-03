@@ -35,6 +35,7 @@
 
         public double EndLongitude { get; set; }
 
+        //OPTIONAL: Calculate the distance
         public double Distance => CalculateDistanceInMeters(StartLatitude, StartLongitude,
            EndLatitude, EndLongitude);
 
