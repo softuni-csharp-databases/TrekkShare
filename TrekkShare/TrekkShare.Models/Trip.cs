@@ -8,7 +8,7 @@
     {
         public Trip()
         {
-            this.Users = new HashSet<User>();
+            this.TouristTrips = new HashSet<TouristTrip>();
         }
 
         [Key]
@@ -40,6 +40,6 @@
         public int? CottageId { get; set; }
         public Cottage Cottage { get; set; }
 
-        public ICollection<User> Users { get; set; }
+        public ICollection<TouristTrip> TouristTrips { get; set; }
     }
 }
