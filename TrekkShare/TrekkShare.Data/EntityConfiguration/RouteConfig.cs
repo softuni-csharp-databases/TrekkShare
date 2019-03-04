@@ -1,4 +1,4 @@
-﻿namespace TrekkShare.Data.EntityConfiguration
+namespace TrekkShare.Data.EntityConfiguration
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
