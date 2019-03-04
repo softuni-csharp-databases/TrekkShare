@@ -1,9 +1,10 @@
-﻿namespace TrekkShare.Data
+namespace TrekkShare.Data
 {
     using Microsoft.EntityFrameworkCore;
 
     using EntityConfiguration;
     using TrekkShare.Models;
+    using ConnectionProject;
 
     public class TrekkShareContext : DbContext
     {
@@ -33,6 +34,10 @@
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfig());
+            modelBuilder.ApplyConfiguration(new MountainConfig());
+            modelBuilder.ApplyConfiguration(new RouteConfig());
+            modelBuilder.ApplyConfiguration(new TouristTripConfig());
+            modelBuilder.ApplyConfiguration(new PeakConfig());
         }
     }
 }
