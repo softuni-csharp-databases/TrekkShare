@@ -6,23 +6,18 @@
 
     public class Transport
     { 
-        [Key]
         public int TransportId { get; set; }
 
-        [Required]
         public TransportType TransportType { get; set; }
 
-        [Required]
         public DateTime DepartureTime { get; set; }
 
         public DateTime ArrivalTime { get; set; }
-
-        [Required]
+        
         public string DepartureAddress { get; set; }
 
         public int Availableseats { get; set; }
 
-        [Required]
         public decimal ExpectedCostPerPerson { get; set; }
 
         public int TripId { get; set; }
