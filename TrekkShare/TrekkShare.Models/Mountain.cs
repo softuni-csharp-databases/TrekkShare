@@ -1,4 +1,4 @@
-﻿namespace TrekkShare.Models
+namespace TrekkShare.Models
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -30,5 +30,6 @@
         public ICollection<Peak> Peaks { get; set; }
         public ICollection<River> Rivers { get; set; }
         public ICollection<Cottage> Cottages { get; set; }
+        public ICollection<Route> Routes { get; set; }
     }
 }
