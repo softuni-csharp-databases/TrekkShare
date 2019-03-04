@@ -20,14 +20,6 @@ namespace TrekkShare.Data.EntityConfiguration
                 .IsRequired()
                 .IsUnicode();
 
-            builder.HasOne(c => c.Characteristics)
-                .WithMany(x => x.Caves)
-                .HasForeignKey(x => x.CharacteristicsId);
-
-            builder.HasOne(c => c.CaveDescription)
-                .WithMany(x => x.Caves)
-                .HasForeignKey(x=>x.CaveDescriptionId);
-
             builder.HasOne(c => c.Town)
                 .WithMany(x => x.Caves)
                 .HasForeignKey(x=>x.TownId);
