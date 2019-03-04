@@ -10,6 +10,8 @@ namespace TrekkShare.Models
             this.Peaks = new HashSet<Peak>();
             this.Rivers = new HashSet<River>();
             this.Cottages = new HashSet<Cottage>();
+            this.Routes = new HashSet<Route>();
+            this.Caves = new HashSet<Cave>();
         }
 
         [Key]
@@ -31,5 +33,6 @@ namespace TrekkShare.Models
         public ICollection<River> Rivers { get; set; }
         public ICollection<Cottage> Cottages { get; set; }
         public ICollection<Route> Routes { get; set; }
+        public ICollection<Cave> Caves { get; set; }
     }
 }
