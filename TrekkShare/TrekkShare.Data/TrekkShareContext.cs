@@ -4,7 +4,6 @@ namespace TrekkShare.Data
 
     using EntityConfiguration;
     using TrekkShare.Models;
-    using ConnectionProject;
 
     public class TrekkShareContext : DbContext
     {
