@@ -4,12 +4,12 @@ namespace TrekkShare.Data.EntityConfiguration
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
     using Models;
 
-    public class CaveConfig: IEntityTypeConfiguration<Cave>
+    public class CaveConfig : IEntityTypeConfiguration<Cave>
     {
         public void Configure(EntityTypeBuilder<Cave> builder)
         {
             builder
-                .HasKey(c=>c.Id);
+                .HasKey(c => c.Id);
 
             builder
                 .Property(c => c.Name)
@@ -18,9 +18,10 @@ namespace TrekkShare.Data.EntityConfiguration
                 .IsRequired()
                 .IsUnicode();
 
-            builder.HasOne(c => c.Town)
+             builder.HasOne(c => c.Mountain)
                 .WithMany(x => x.Caves)
-                .HasForeignKey(x=>x.TownId);
+                .HasForeignKey(x => x.MountainId);
         }
     }
 }
+
