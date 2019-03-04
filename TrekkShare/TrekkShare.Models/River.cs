@@ -4,6 +4,11 @@
     
     public class River
     {
+        public River()
+        {
+            this.Waterfalls = new HashSet<Waterfall>();
+        }
+        
         [Key]
         public int RiverId { get; set; }
 
@@ -27,6 +32,7 @@
         
         public int CountryId { get; set; }
 
+        public ICollection<Waterfall> Waterfalls { get; set; }
         //OPTIONAL: kayak trips, boat trips
     }
 }
