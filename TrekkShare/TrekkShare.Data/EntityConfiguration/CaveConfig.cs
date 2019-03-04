@@ -1,5 +1,3 @@
-﻿
-
 namespace TrekkShare.Data.EntityConfiguration
 {
     using Microsoft.EntityFrameworkCore;
