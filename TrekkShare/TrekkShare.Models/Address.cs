@@ -11,24 +11,23 @@
         private int townId;
         private Town town;
 
-        public Address(string text)
+        public Address(int id, string text, int townId, Town town)
         {
-            //this.Id = AssignAddressId();
-            //this.Text = text;
-            //this.TownId = Town.AssignTownId();
-            //Town town = 
+            this.Id = id;
+            this.Text = text;
+            this.TownId = townId;
+            Town town = town;
         }
 
         [Key]
-        public int Id { get;  }
-        public string Text { get; }
+        public int Id { get;  set; }
+        
+        [Required]
+        [Column(TypeName = "nvarchar(300)")]
+        public string Text { get; set; }
+        
         [ForeignKey(Town(Id))]
-        public int TownId { get; }
-        public Town Town { get; }
-
-        private static void AssignAddressId()
-        {
-            //this.Id++;
-        }
+        public int TownId { get; set; }
+        public Town Town { get; set; }
     }
 }
