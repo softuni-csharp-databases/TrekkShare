@@ -3,14 +3,10 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using TrekkShare.Services.Contracts;
-
+    
+    [Table("Addresses")]
     public class Address : IAddress
     {
-        private int id;
-        private string text;
-        private int townId;
-        private Town town;
-
         public Address(int id, string text, int townId, Town town)
         {
             this.Id = id;
