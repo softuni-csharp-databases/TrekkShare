@@ -2,10 +2,9 @@
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using TrekkShare.Services.Contracts;
     
     [Table("Addresses")]
-    public class Address : IAddress
+    public class Address
     {
         public Address(int id, string text, int townId, Town town)
         {
