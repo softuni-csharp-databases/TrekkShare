@@ -30,6 +30,7 @@ namespace TrekkShare.Data
         public DbSet<TouristTrip> TouristTrips { get; set; }
         public DbSet<Town> Towns { get; set; }
         public DbSet<Trip> Trips { get; set; }
+        public DbSet<Waterfall> Waterfalls { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
