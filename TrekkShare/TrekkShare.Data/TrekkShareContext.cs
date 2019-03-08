@@ -38,7 +38,7 @@ namespace TrekkShare.Data
             if (!optionsBuilder.IsConfigured)
             {
                 //TODO move file in a appsettings.json file
-                optionsBuilder.UseSqlServer(Configuration.ConnectionString);
+                optionsBuilder.UseSqlServer("Server=;Database=TrekkShare;Integrated Security=true"/*Configuration.ConnectionString*/);
             }
         }
 
@@ -49,6 +49,7 @@ namespace TrekkShare.Data
             modelBuilder.ApplyConfiguration(new RouteConfig());
             modelBuilder.ApplyConfiguration(new TouristTripConfig());
             modelBuilder.ApplyConfiguration(new PeakConfig());
+            modelBuilder.ApplyConfiguration(new WaterfallConfig());
         }
     }
 }

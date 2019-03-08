@@ -41,7 +41,7 @@ namespace TrekkShare.Data.Migrations
 
                     b.HasIndex("MountainId");
 
-                    b.ToTable("Cave");
+                    b.ToTable("Caves");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.Cottage", b =>
@@ -61,7 +61,7 @@ namespace TrekkShare.Data.Migrations
 
                     b.HasIndex("MountainId");
 
-                    b.ToTable("Cottage");
+                    b.ToTable("Cottages");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.Country", b =>
@@ -75,7 +75,7 @@ namespace TrekkShare.Data.Migrations
 
                     b.HasKey("CountryId");
 
-                    b.ToTable("Country");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.Mountain", b =>
@@ -91,7 +91,7 @@ namespace TrekkShare.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Mountain");
+                    b.ToTable("Mountains");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.Municipality", b =>
@@ -105,11 +105,15 @@ namespace TrekkShare.Data.Migrations
                     b.Property<string>("Name")
                         .IsRequired();
 
+                    b.Property<int?>("ProvinceId");
+
                     b.HasKey("MunicipalityId");
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("Municipality");
+                    b.HasIndex("ProvinceId");
+
+                    b.ToTable("Municipalities");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.Peak", b =>
@@ -131,7 +135,22 @@ namespace TrekkShare.Data.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("Peak");
+                    b.ToTable("Peaks");
+                });
+
+            modelBuilder.Entity("TrekkShare.Models.Province", b =>
+                {
+                    b.Property<int>("ProvinceId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(75)");
+
+                    b.HasKey("ProvinceId");
+
+                    b.ToTable("Provinces");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.River", b =>
@@ -163,7 +182,7 @@ namespace TrekkShare.Data.Migrations
 
                     b.HasIndex("MountainId");
 
-                    b.ToTable("River");
+                    b.ToTable("Rivers");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.Route", b =>
@@ -216,7 +235,7 @@ namespace TrekkShare.Data.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("Tourist");
+                    b.ToTable("Tourists");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.TouristTrip", b =>
@@ -231,7 +250,7 @@ namespace TrekkShare.Data.Migrations
 
                     b.HasIndex("TripId");
 
-                    b.ToTable("TouristTrip");
+                    b.ToTable("TouristTrips");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.Town", b =>
@@ -249,7 +268,7 @@ namespace TrekkShare.Data.Migrations
 
                     b.HasIndex("MunicipalityId");
 
-                    b.ToTable("Town");
+                    b.ToTable("Towns");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.Trip", b =>
@@ -318,6 +337,39 @@ namespace TrekkShare.Data.Migrations
                     b.ToTable("User");
                 });
 
+            modelBuilder.Entity("TrekkShare.Models.Waterfall", b =>
+                {
+                    b.Property<int>("WaterfallId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(400);
+
+                    b.Property<string>("DomesticName")
+                        .HasMaxLength(50)
+                        .IsUnicode(true);
+
+                    b.Property<int?>("FlowRate");
+
+                    b.Property<int?>("Height");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(true);
+
+                    b.Property<int>("RiverId");
+
+                    b.Property<int?>("Width");
+
+                    b.HasKey("WaterfallId");
+
+                    b.HasIndex("RiverId");
+
+                    b.ToTable("Waterfalls");
+                });
+
             modelBuilder.Entity("TrekkShare.Models.Cave", b =>
                 {
                     b.HasOne("TrekkShare.Models.Mountain", "Mountain")
@@ -340,6 +392,10 @@ namespace TrekkShare.Data.Migrations
                         .WithMany("Municipalities")
                         .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("TrekkShare.Models.Province")
+                        .WithMany("Municipalities")
+                        .HasForeignKey("ProvinceId");
                 });
 
             modelBuilder.Entity("TrekkShare.Models.Peak", b =>
@@ -409,6 +465,14 @@ namespace TrekkShare.Data.Migrations
                     b.HasOne("TrekkShare.Models.Route", "Route")
                         .WithMany()
                         .HasForeignKey("RouteId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("TrekkShare.Models.Waterfall", b =>
+                {
+                    b.HasOne("TrekkShare.Models.River", "River")
+                        .WithMany("Waterfalls")
+                        .HasForeignKey("RiverId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

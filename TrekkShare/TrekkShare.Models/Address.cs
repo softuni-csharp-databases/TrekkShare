@@ -11,7 +11,7 @@
             this.Id = id;
             this.Text = text;
             this.TownId = townId;
-            Town town = town;
+             this.Town = town;
         }
 
         [Key]
@@ -21,8 +21,9 @@
         [Column(TypeName = "nvarchar(300)")]
         public string Text { get; set; }
         
-        [ForeignKey(Town(Id))]
+     
         public int TownId { get; set; }
+        [ForeignKey(nameof(TownId))]
         public Town Town { get; set; }
     }
 }
