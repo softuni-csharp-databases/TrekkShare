@@ -1,9 +1,9 @@
-﻿using NetTopologySuite.Geometries;
-
 namespace TrekkShare.Models
 {
     using System;
     using System.Collections.Generic;
+
+    using NetTopologySuite.Geometries;
 
     public class Trip
     {
