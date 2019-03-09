@@ -1,5 +1,4 @@
-﻿
-namespace TrekkShare.Models
+﻿namespace TrekkShare.Models
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -15,7 +14,6 @@ namespace TrekkShare.Models
         [Key]
         public int AddressId { get; set; }
 
-        //TODO move in AddressContext
         [Required]
         [Column(TypeName = "nvarchar(300)")]
         public string Text { get; set; }
