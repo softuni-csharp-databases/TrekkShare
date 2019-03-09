@@ -19,7 +19,7 @@ namespace TrekkShare.Models
 
         public Experience Experience { get; set; }
 
-        public int TripsCount { get; set; }
+        public int TripsCount => this.TouristTrips.Count;
 
         public ICollection<TouristTrip> TouristTrips { get; set; }
     }
