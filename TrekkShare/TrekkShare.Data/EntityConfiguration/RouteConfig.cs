@@ -17,11 +17,6 @@ namespace TrekkShare.Data.EntityConfiguration
                 .IsRequired(true)
                 .IsUnicode(true);
 
-            builder.Property(x => x.StartGeoPoint)
-                .IsRequired(true);
-
-            builder.Property(x => x.EndGeoPoint)
-                .IsRequired(true);
         }
     }
 }
