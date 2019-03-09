@@ -6,11 +6,6 @@ namespace TrekkShare.Models
 {
     public class User
     {
-        public User()
-        {
-            //Initialize collections
-        }
-
         public Guid UserId { get; set; }
 
         public string Username { get; set; }
