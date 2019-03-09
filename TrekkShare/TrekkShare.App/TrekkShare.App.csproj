@@ -6,11 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Core\" />
     <Folder Include="MappingConfiguration\" />
     <Folder Include="Attributes\" />
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrekkShare.Data\TrekkShare.Data.csproj" />
+    <ProjectReference Include="..\TrekkShare.Services\TrekkShare.Services.csproj" />
   </ItemGroup>
 
 </Project>
