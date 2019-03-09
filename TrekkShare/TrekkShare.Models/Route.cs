@@ -9,7 +9,7 @@ namespace TrekkShare.Models
     {
         public Route()
         {
-            this.MountainsThatRunsThrough = new HashSet<RouteMountain>();
+            this.RouteMountains = new HashSet<RouteMountain>();
         }
 
         public int RouteId { get; set; }
@@ -28,7 +28,7 @@ namespace TrekkShare.Models
 
         public Point EndGeoPoint { get; set; }
 
-        public ICollection<RouteMountain> MountainsThatRunsThrough { get; set; }
+        public ICollection<RouteMountain> RouteMountains { get; set; }
 
         //Optional: Calculate the distance
         //public double Distance => CalculateDistanceInMeters(StartLatitude, StartLongitude,
