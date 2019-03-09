@@ -1,8 +1,9 @@
-﻿namespace TrekkShare.Data.EntityConfiguration
+namespace TrekkShare.Data.EntityConfiguration
 {
 
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
     using TrekkShare.Models;
 
     public class RouteMountainConfig : IEntityTypeConfiguration<RouteMountain>
@@ -13,11 +14,14 @@
 
             builder.HasOne(x => x.Route)
                 .WithMany(x => x.RouteMountains)
-                .HasForeignKey(x => x.RouteId);
+                .HasForeignKey(x => x.RouteId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(x => x.Mountain)
                 .WithMany(x => x.RouteMountains)
-                .HasForeignKey(x => x.MountainId);
+                .HasForeignKey(x => x.MountainId)
+                .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }
