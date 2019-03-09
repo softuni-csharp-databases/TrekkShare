@@ -1,28 +1,22 @@
-﻿namespace TrekkShare.Models
+namespace TrekkShare.Models
 {
-    using System.ComponentModel.DataAnnotations;
     using Enums.RouteEnums;
-    
+
     public class Route
     {
         public int RouteId { get; set; }
 
-        [Required]
         public int MountainId { get; set; }
         public Mountain Mountain { get; set; }
 
         public double Length { get; set; }
-        
+
         public double Denivelation { get; set; }
 
-        [Required]
         public TerrainType TerrainType { get; set; }
 
-        [Required]
         public DifficultyLevel DifficultyLevel { get; set; }
 
-        // Това може да е отделен клас ? Някой добави таск в meistertask, но никой не го е поел.
-        [Required]
         public EquipmentLevel RecommendedEquipmentLevel { get; set; }
 
         public double StartLatitude { get; set; }
