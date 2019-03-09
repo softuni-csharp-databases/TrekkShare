@@ -7,7 +7,7 @@
     {
         public Address(int id, string text, int townId, Town town)
         {
-            this.Id = id;
+            this.AddressId = id;
             this.Text = text;
             this.TownId = townId;
             this.Town = town;
