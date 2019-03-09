@@ -1,9 +1,0 @@
-C:\Users\User\Desktop\SoftuniProject\TrekkShare\TrekkShare\TrekkShare.Models\obj\Debug\netcoreapp2.1\TrekkShare.Models.csprojAssemblyReference.cache
-C:\Users\User\Desktop\SoftuniProject\TrekkShare\TrekkShare\TrekkShare.Models\obj\Debug\netcoreapp2.1\TrekkShare.Models.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\SoftuniProject\TrekkShare\TrekkShare\TrekkShare.Models\obj\Debug\netcoreapp2.1\TrekkShare.Models.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\SoftuniProject\TrekkShare\TrekkShare\TrekkShare.Models\obj\Debug\netcoreapp2.1\TrekkShare.Models.AssemblyInfo.cs
-C:\Users\User\Desktop\SoftuniProject\TrekkShare\TrekkShare\TrekkShare.Models\bin\Debug\netcoreapp2.1\TrekkShare.Models.deps.json
-C:\Users\User\Desktop\SoftuniProject\TrekkShare\TrekkShare\TrekkShare.Models\bin\Debug\netcoreapp2.1\TrekkShare.Models.dll
-C:\Users\User\Desktop\SoftuniProject\TrekkShare\TrekkShare\TrekkShare.Models\bin\Debug\netcoreapp2.1\TrekkShare.Models.pdb
-C:\Users\User\Desktop\SoftuniProject\TrekkShare\TrekkShare\TrekkShare.Models\obj\Debug\netcoreapp2.1\TrekkShare.Models.dll
-C:\Users\User\Desktop\SoftuniProject\TrekkShare\TrekkShare\TrekkShare.Models\obj\Debug\netcoreapp2.1\TrekkShare.Models.pdb
