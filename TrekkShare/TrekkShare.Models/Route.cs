@@ -26,9 +26,12 @@ namespace TrekkShare.Models
 
         public EquipmentLevel RecommendedEquipmentLevel { get; set; }
 
-        public Point StartGeoPoint { get; set; }
 
-        public Point EndGeoPoint { get; set; }
+        public int StartPointId { get; set; }
+        public Point StartPoint { get; set; }
+
+        public int EndPointId { get; set; }
+        public Point EndPoint { get; set; }
 
         public ICollection<RouteMountain> RouteMountains { get; set; }
 
