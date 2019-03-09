@@ -10,11 +10,12 @@
             this.Waterfalls = new HashSet<Waterfall>();
         }
 
-        [Key] public int RiverId { get; set; }
+        public int RiverId { get; set; }
 
-        [Required] public string Name { get; set; }
+        [Required]
+        public string Name { get; set; }
 
-        [Required] public int Length { get; set; }
+        public int Length { get; set; }
 
         public int Elevation { get; set; }
 

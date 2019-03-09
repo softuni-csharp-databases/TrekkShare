@@ -1,8 +1,8 @@
 ﻿namespace TrekkShare.Models
 {
     using System;
-    using System.ComponentModel.DataAnnotations;
-    using TrekkShare.Models.Enums.TransportEnums;
+
+    using Enums.TransportEnums;
 
     public class Transport
     { 
@@ -16,7 +16,7 @@
         
         public string DepartureAddress { get; set; }
 
-        public int Availableseats { get; set; }
+        public int AvailableSeats { get; set; }
 
         public decimal ExpectedCostPerPerson { get; set; }
 

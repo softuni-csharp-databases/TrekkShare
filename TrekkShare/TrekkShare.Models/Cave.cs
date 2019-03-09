@@ -1,9 +1,10 @@
+using NetTopologySuite.Geometries;
+
 namespace TrekkShare.Models
 {
     public class Cave
-
     {
-        public int Id { get; set; }
+        public int CaveId { get; set; }
 
         public string Name { get; set; }
 
@@ -18,5 +19,7 @@ namespace TrekkShare.Models
         public int MountainId { get; set; }
         public Mountain Mountain { get; set; }
 
+        public int GeoLocationId { get; set; }
+        public Point GeoLocation { get; set; }
     }
 }

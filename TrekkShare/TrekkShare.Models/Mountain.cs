@@ -16,7 +16,7 @@ namespace TrekkShare.Models
             this.Caves = new HashSet<Cave>();
         }
 
-        public int Id { get; set; }
+        public int MountainId { get; set; }
 
         [Required]
         public string Name { get; set; }

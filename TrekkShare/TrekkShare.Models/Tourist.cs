@@ -12,7 +12,7 @@ namespace TrekkShare.Models
             this.TouristTrips = new HashSet<TouristTrip>();
         }
 
-        public int Id { get; set; }
+        public int TouristId { get; set; }
 
         public Guid UserId { get; set; }
         public User User { get; set; }

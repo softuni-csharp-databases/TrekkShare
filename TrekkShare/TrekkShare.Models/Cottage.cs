@@ -1,20 +1,21 @@
 ﻿namespace TrekkShare.Models
 {
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
+    using NetTopologySuite.Geometries;
 
     public class Cottage
     {
-        [Key]
         public int CottageId { get; set; }
 
         [Required]
         public string Name { get; set; }
 
-        [Required]
         public int Capacity { get; set; }
 
-        [Required]
         public int MountainId { get; set; }
+        public Mountain Mountain { get; set; }
+
+        public int GeoLocationId { get; set; }
+        public Point GeoLocation { get; set; }
     }
 }

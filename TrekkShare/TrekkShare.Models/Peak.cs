@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using NetTopologySuite.Geometries;
 using TrekkShare.Models.Enums.RouteEnums;
 
 namespace TrekkShare.Models
@@ -20,5 +21,8 @@ namespace TrekkShare.Models
 
         public int CountryId { get; set; }
         public Country Country { get; set; }
+
+        public int GeoLocationId { get; set; }
+        public Point GeoLocation { get; set; }
     }
 }
