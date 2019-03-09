@@ -1,13 +1,18 @@
 namespace TrekkShare.Models
 {
+    using System.Collections.Generic;
+
     using Enums.RouteEnums;
+    using NetTopologySuite.Geometries;
 
     public class Route
     {
-        public int RouteId { get; set; }
+        public Route()
+        {
+            this.MountainsThatRunsThrough = new HashSet<RouteMountain>();
+        }
 
-        public int MountainId { get; set; }
-        public Mountain Mountain { get; set; }
+        public int RouteId { get; set; }
 
         public double Length { get; set; }
 
@@ -19,13 +24,11 @@ namespace TrekkShare.Models
 
         public EquipmentLevel RecommendedEquipmentLevel { get; set; }
 
-        public double StartLatitude { get; set; }
+        public Point StartGeoPoint { get; set; }
 
-        public double StartLongitude { get; set; }
+        public Point EndGeoPoint { get; set; }
 
-        public double EndLatitude { get; set; }
-
-        public double EndLongitude { get; set; }
+        public ICollection<RouteMountain> MountainsThatRunsThrough { get; set; }
 
         //Optional: Calculate the distance
         //public double Distance => CalculateDistanceInMeters(StartLatitude, StartLongitude,
