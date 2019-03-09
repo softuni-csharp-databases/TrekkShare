@@ -17,21 +17,26 @@ namespace TrekkShare.Data
         {
         }
 
+        public DbSet<Address> Addresses { get; set; }
         public DbSet<Cave> Caves { get; set; }
         public DbSet<Cottage> Cottages { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<GeoLocation> GeoLocations { get; set; }
+        public DbSet<Lake> Lakes { get; set; } 
         public DbSet<Mountain> Mountains { get; set; }
         public DbSet<Municipality> Municipalities { get; set; }
         public DbSet<Peak> Peaks { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<River> Rivers { get; set; }
+        public DbSet<RiverCountry> RiverCountries { get; set; }
         public DbSet<Route> Routes { get; set; }
         public DbSet<Tourist> Tourists { get; set; }
         public DbSet<TouristTrip> TouristTrips { get; set; }
         public DbSet<Town> Towns { get; set; }
+        public DbSet<Transport> Transports { get; set; }
         public DbSet<Trip> Trips { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Waterfall> Waterfalls { get; set; }
-        public DbSet<GeoLocation> GeoLocations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -44,11 +49,13 @@ namespace TrekkShare.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new UserConfig());
+            modelBuilder.ApplyConfiguration(new CaveConfig());
             modelBuilder.ApplyConfiguration(new MountainConfig());
+            modelBuilder.ApplyConfiguration(new PeakConfig());
             modelBuilder.ApplyConfiguration(new RouteConfig());
             modelBuilder.ApplyConfiguration(new TouristTripConfig());
-            modelBuilder.ApplyConfiguration(new PeakConfig());
+            modelBuilder.ApplyConfiguration(new TransportConfig());
+            modelBuilder.ApplyConfiguration(new UserConfig());
             modelBuilder.ApplyConfiguration(new WaterfallConfig());
         }
     }
