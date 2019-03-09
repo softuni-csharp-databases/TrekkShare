@@ -19,9 +19,6 @@ namespace TrekkShare.Models
         public int MountainId { get; set; }
         public Mountain Mountain { get; set; }
 
-        public int CountryId { get; set; }
-        public Country Country { get; set; }
-
         public int GeoLocationId { get; set; }
         public Point GeoLocation { get; set; }
     }

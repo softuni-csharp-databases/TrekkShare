@@ -10,6 +10,7 @@ namespace TrekkShare.Models
         public Trip()
         {
             this.TouristTrips = new HashSet<TouristTrip>();
+            this.Transports = new HashSet<Transport>();
         }
 
         public int TripId { get; set; }
@@ -36,5 +37,6 @@ namespace TrekkShare.Models
         public Cottage Cottage { get; set; }
 
         public ICollection<TouristTrip> TouristTrips { get; set; }
+        public ICollection<Transport> Transports { get; set; }
     }
 }

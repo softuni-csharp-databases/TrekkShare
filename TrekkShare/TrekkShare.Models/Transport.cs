@@ -22,8 +22,5 @@
 
         public int TripId { get; set; }
         public Trip Trip { get; set; }
-
-        public int TownId { get; set; }
-        public Town DepartureTown { get; set; }
     }
 }

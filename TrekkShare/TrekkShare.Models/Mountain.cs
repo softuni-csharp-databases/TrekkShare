@@ -10,10 +10,11 @@ namespace TrekkShare.Models
         public Mountain()
         {
             this.Peaks = new HashSet<Peak>();
-            this.Rivers = new HashSet<River>();
+            this.MountainRivers = new HashSet<MountainRiver>();
             this.Cottages = new HashSet<Cottage>();
             this.Routes = new HashSet<Route>();
             this.Caves = new HashSet<Cave>();
+            this.Lakes = new HashSet<Lake>();
         }
 
         public int MountainId { get; set; }
@@ -30,9 +31,10 @@ namespace TrekkShare.Models
         public Country Country { get; set; }
 
         public ICollection<Peak> Peaks { get; set; }
-        public ICollection<River> Rivers { get; set; }
+        public ICollection<MountainRiver> MountainRivers { get; set; }
         public ICollection<Cottage> Cottages { get; set; }
         public ICollection<Route> Routes { get; set; }
         public ICollection<Cave> Caves { get; set; }
+        public ICollection<Lake> Lakes { get; set; }
     }
 }
