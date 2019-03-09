@@ -9,7 +9,7 @@ namespace TrekkShare.Data.EntityConfiguration
         public void Configure(EntityTypeBuilder<Cave> builder)
         {
             builder
-                .HasKey(c => c.Id);
+                .HasKey(c => c.CaveId);
 
             builder
                 .Property(c => c.Name)

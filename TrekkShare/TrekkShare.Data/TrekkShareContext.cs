@@ -42,16 +42,21 @@ namespace TrekkShare.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //TODO move file in a appsettings.json file
-                optionsBuilder.UseSqlServer("Server=;Database=TrekkShare;Integrated Security=true"/*Configuration.ConnectionString*/);
+                optionsBuilder
+                    .UseSqlServer(Configuration.ConnectionString,
+                        sqlOptions => sqlOptions.UseNetTopologySuite());
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CaveConfig());
+            modelBuilder.ApplyConfiguration(new CountryConfig());
             modelBuilder.ApplyConfiguration(new MountainConfig());
+            modelBuilder.ApplyConfiguration(new MountainRiverConfig());
             modelBuilder.ApplyConfiguration(new PeakConfig());
+            modelBuilder.ApplyConfiguration(new RiverConfig());
+            modelBuilder.ApplyConfiguration(new RiverCountryConfig());
             modelBuilder.ApplyConfiguration(new RouteConfig());
             modelBuilder.ApplyConfiguration(new TouristTripConfig());
             modelBuilder.ApplyConfiguration(new TransportConfig());
