@@ -8,6 +8,7 @@
         public River()
         {
             this.Waterfalls = new HashSet<Waterfall>();
+            this.RiverCountries = new HashSet<RiverCountry>();
         }
 
         public int RiverId { get; set; }
@@ -29,8 +30,7 @@
 
         public int MountainId { get; set; }
 
-        public int CountryId { get; set; }
-
+        public ICollection<RiverCountry> RiverCountries { get; set; }
         public ICollection<Waterfall> Waterfalls { get; set; }
         //OPTIONAL: kayak trips, boat trips
     }
