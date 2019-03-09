@@ -14,6 +14,8 @@ namespace TrekkShare.Models
 
         public int RouteId { get; set; }
 
+        public string Name { get; set; }
+
         public double Length { get; set; }
 
         public double Denivelation { get; set; }
