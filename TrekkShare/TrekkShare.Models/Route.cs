@@ -29,10 +29,10 @@ namespace TrekkShare.Models
 
 
         public int StartPointId { get; set; }
-        public Point StartPoint { get; set; }
+        public GeoLocation StartPoint { get; set; }
 
         public int EndPointId { get; set; }
-        public Point EndPoint { get; set; }
+        public GeoLocation EndPoint { get; set; }
 
         public ICollection<RouteMountain> RouteMountains { get; set; }
         public ICollection<Trip> Trips { get; set; }
