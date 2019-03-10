@@ -12,11 +12,11 @@
 
         public DateTime DepartureTime { get; set; }
 
-        public DateTime ArrivalTime { get; set; }
+        public DateTime? ArrivalTime { get; set; }
         
         public string DepartureAddress { get; set; }
 
-        public int AvailableSeats { get; set; }
+        public int? AvailableSeats { get; set; }
 
         public decimal ExpectedCostPerPerson { get; set; }
 
