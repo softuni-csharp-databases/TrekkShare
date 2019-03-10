@@ -17,6 +17,7 @@ namespace TrekkShare.Models
         [Required]
         public string Name { get; set; }
 
+        [Required]
         public int MunicipalityId { get; set; }
         public Municipality Municipality { get; set; }
 

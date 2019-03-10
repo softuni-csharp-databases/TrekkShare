@@ -22,7 +22,7 @@ namespace TrekkShare.Data
         public DbSet<Cottage> Cottages { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<GeoLocation> GeoLocations { get; set; }
-        public DbSet<Lake> Lakes { get; set; } 
+        public DbSet<Lake> Lakes { get; set; }
         public DbSet<Mountain> Mountains { get; set; }
         public DbSet<Municipality> Municipalities { get; set; }
         public DbSet<Peak> Peaks { get; set; }
@@ -54,11 +54,14 @@ namespace TrekkShare.Data
             modelBuilder.ApplyConfiguration(new CountryConfig());
             modelBuilder.ApplyConfiguration(new MountainConfig());
             modelBuilder.ApplyConfiguration(new MountainRiverConfig());
+            modelBuilder.ApplyConfiguration(new MunicipalityConfig());
             modelBuilder.ApplyConfiguration(new PeakConfig());
             modelBuilder.ApplyConfiguration(new RiverConfig());
             modelBuilder.ApplyConfiguration(new RiverCountryConfig());
             modelBuilder.ApplyConfiguration(new RouteConfig());
+            modelBuilder.ApplyConfiguration(new RouteMountainConfig());
             modelBuilder.ApplyConfiguration(new TouristTripConfig());
+            modelBuilder.ApplyConfiguration(new TownConfig());
             modelBuilder.ApplyConfiguration(new TransportConfig());
             modelBuilder.ApplyConfiguration(new UserConfig());
             modelBuilder.ApplyConfiguration(new WaterfallConfig());
