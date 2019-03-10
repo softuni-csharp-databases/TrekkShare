@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NetTopologySuite.Geometries;
-
 namespace TrekkShare.Models
 {
+    using System.Collections.Generic;
+
+    using NetTopologySuite.Geometries;
+
     public class GeoLocation
     {
         public GeoLocation()
@@ -23,5 +22,6 @@ namespace TrekkShare.Models
         public ICollection<Lake> Lakes { get; set; }
         public ICollection<Cottage> Cottages { get; set; }
         public ICollection<Peak> Peaks { get; set; }
+        public ICollection<Route> Routes { get; set; }
     }
 }

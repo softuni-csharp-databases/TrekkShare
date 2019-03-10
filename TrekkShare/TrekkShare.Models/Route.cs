@@ -3,7 +3,6 @@ namespace TrekkShare.Models
     using System.Collections.Generic;
 
     using Enums.RouteEnums;
-    using NetTopologySuite.Geometries;
 
     public class Route
     {
