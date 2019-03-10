@@ -12,6 +12,7 @@ namespace TrekkShare.Models
             this.Lakes = new HashSet<Lake>();
             this.Cottages = new HashSet<Cottage>();
             this.Peaks = new HashSet<Peak>();
+            this.Routes = new HashSet<Route>();
         }
 
         public int GeoLocationId { get; set; }
