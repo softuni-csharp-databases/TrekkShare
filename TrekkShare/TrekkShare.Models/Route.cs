@@ -10,6 +10,7 @@ namespace TrekkShare.Models
         public Route()
         {
             this.RouteMountains = new HashSet<RouteMountain>();
+            this.Trips = new HashSet<Trip>();
         }
 
         public int RouteId { get; set; }
@@ -34,6 +35,7 @@ namespace TrekkShare.Models
         public Point EndPoint { get; set; }
 
         public ICollection<RouteMountain> RouteMountains { get; set; }
+        public ICollection<Trip> Trips { get; set; }
 
         //Optional: Calculate the distance
         //public double Distance => CalculateDistanceInMeters(StartLatitude, StartLongitude,
