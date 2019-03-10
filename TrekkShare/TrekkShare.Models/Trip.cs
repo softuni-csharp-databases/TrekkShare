@@ -23,10 +23,10 @@ namespace TrekkShare.Models
         public int NightsCount { get; set; }
 
         public int StartPointId { get; set; }
-        public Point StartPoint { get; set; }
+        public GeoLocation StartPoint { get; set; }
 
         public int EndPointId { get; set; }
-        public Point EndPoint { get; set; }
+        public GeoLocation EndPoint { get; set; }
 
         public int MaxTouristsCount { get; set; }
 

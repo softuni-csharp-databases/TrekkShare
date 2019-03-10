@@ -12,6 +12,14 @@ namespace TrekkShare.Data.EntityConfiguration
         {
             builder.HasKey(x => x.RouteId);
 
+            builder.HasOne(x => x.StartPoint)
+                .WithMany(x => x.Routes)
+                .HasForeignKey(x => x.StartPointId);
+
+            builder.HasOne(x => x.EndPoint)
+                .WithMany(x => x.Routes)
+                .HasForeignKey(x => x.EndPointId);
+
             builder.Property(x => x.Name)
                 .HasMaxLength(30)
                 .IsRequired(true)
