@@ -5,11 +5,9 @@ namespace TrekkShare.Models
     using NetTopologySuite.Geometries;
 
     public class Lake
-    {
-        [Key]
+    {       
         public int LakeId { get; set; }
-     
-        [Required]
+             
         public string Name { get; set; }
 
         public double Surface { get; set; }

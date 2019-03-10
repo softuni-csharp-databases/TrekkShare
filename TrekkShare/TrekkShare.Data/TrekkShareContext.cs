@@ -62,6 +62,7 @@ namespace TrekkShare.Data
             modelBuilder.ApplyConfiguration(new TransportConfig());
             modelBuilder.ApplyConfiguration(new UserConfig());
             modelBuilder.ApplyConfiguration(new WaterfallConfig());
+            modelBuilder.ApplyConfiguration(new LakeConfig());
         }
     }
 }
