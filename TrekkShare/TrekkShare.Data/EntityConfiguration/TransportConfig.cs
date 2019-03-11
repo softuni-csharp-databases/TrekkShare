@@ -9,12 +9,15 @@
         public void Configure(EntityTypeBuilder<Transport> builder)
         {
             builder.HasKey(x => x.TransportId);
+            
+            builder.ToTable("Transport");
 
             builder.Property(t => t.TransportType)
                 .IsRequired();
 
             builder.Property(x => x.DepartureAddress)
-                .IsRequired();
+                .IsRequired()
+                .HasMaxLength(150);
         }
     }
 }
