@@ -9,6 +9,12 @@
     {
         public void Configure(EntityTypeBuilder<Country> builder)
         {
+            builder.HasMany(e => e.RiverCountries)
+                .WithOne(e => e.Country);
+
+            builder.HasMany(e => e.Provinces)
+                .WithOne(e => e.Country);
+
             builder.Property(e => e.Name)
                 .HasColumnType("NVARCHAR(30)")
                 .HasMaxLength(30)

@@ -9,9 +9,9 @@
     {
         public void Configure(EntityTypeBuilder<Municipality> builder)
         {
-            builder.HasOne(e => e.Country)
+            builder.HasOne(e => e.Province)
                 .WithMany(e => e.Municipalities)
-                .HasForeignKey(e => e.CountryId);
+                .HasForeignKey(e => e.ProvinceId);
 
             builder.Property(e => e.Name)
                 .HasColumnType("NVARCHAR(30)")

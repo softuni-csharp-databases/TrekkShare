@@ -7,7 +7,8 @@
     {
         public Country()
         {
-            this.Municipalities = new HashSet<Municipality>();
+            this.Provinces = new HashSet<Province>();
+            this.RiverCountries = new HashSet<RiverCountry>();
         }
 
         [Key]
@@ -16,7 +17,7 @@
         [Required]
         public string Name { get; set; }
 
-        public ICollection<Municipality> Municipalities { get; set; }
+        public ICollection<Province> Provinces { get; set; }
         public ICollection<RiverCountry> RiverCountries { get; set; }
     }
 }

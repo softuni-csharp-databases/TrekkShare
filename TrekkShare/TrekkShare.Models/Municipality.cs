@@ -17,8 +17,8 @@
         public string Name { get; set; }
 
         [Required]
-        public int CountryId { get; set; }
-        public Country Country { get; set; }
+        public int ProvinceId { get; set; }
+        public Province Province { get; set; }
 
         public ICollection<Town> Towns { get; set; }
     }

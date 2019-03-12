@@ -13,6 +13,9 @@
                 .WithMany(e => e.Towns)
                 .HasForeignKey(e => e.MunicipalityId);
 
+            builder.HasMany(e => e.Addresses)
+                .WithOne(e => e.Town);
+
             builder.Property(e => e.Name)
                 .HasColumnType("NVARCHAR(30)")
                 .HasMaxLength(30)
