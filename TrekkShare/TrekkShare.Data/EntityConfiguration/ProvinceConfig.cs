@@ -1,10 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TrekkShare.Data.EntityConfiguration
+﻿namespace TrekkShare.Data.EntityConfiguration
 {
-    class ProvinceConfig
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata.Builders;
+    using TrekkShare.Models;
+
+    public class ProvinceConfig : IEntityTypeConfiguration<Province>
     {
+        public void Configure(EntityTypeBuilder<Province> builder)
+        {
+            builder
+                .HasKey(p => p.ProvinceId);
+
+            builder
+                .HasMany(p => p.Municipalities)
+                .WithOne(m => m.Province);
+
+            builder
+                .Property(p => p.Name)
+                .IsUnicode()
+                .HasMaxLength(75)
+                .IsRequired();
+        }
     }
 }
