@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TrekkShare.Models;
 
@@ -11,9 +8,22 @@ namespace TrekkShare.Data.EntityConfiguration
     {
         public void Configure(EntityTypeBuilder<Peak> builder)
         {
-            builder.HasOne(x => x.Mountain)
-                .WithMany(x => x.Peaks)
-                .HasForeignKey(x => x.PeakId)
+            builder
+                .HasKey(p => p.PeakId);
+
+            builder
+                .Property(p => p.PeakName)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            builder
+                .Property(p => p.PeakElevation)
+                .IsRequired();
+
+            builder
+                .HasOne(p => p.Mountain)
+                .WithMany(p => p.Peaks)
+                .HasForeignKey(p => p.PeakId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

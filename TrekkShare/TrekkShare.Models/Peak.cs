@@ -6,12 +6,13 @@ namespace TrekkShare.Models
 {
     public class Peak
     {
-        [Key]
+        private const int highestPeak = 8848;
+
         public int PeakId { get; set; }
 
-        [Required]
         public string PeakName { get; set; }
 
+        [Range(1, highestPeak)]
         public int PeakElevation { get; set; }
 
         public DifficultyLevel DifficultyLevel { get; set; }
