@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrekkShare.App", "TrekkShare.App\TrekkShare.App.csproj", "{53BAD9C1-D980-469B-9906-0F36A58BE583}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrekkShare.Models", "TrekkShare.Models\TrekkShare.Models.csproj", "{6FD42077-D686-40FF-ACCD-89D4689CBBBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrekkShare.Models", "TrekkShare.Models\TrekkShare.Models.csproj", "{6FD42077-D686-40FF-ACCD-89D4689CBBBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrekkShare.Data", "TrekkShare.Data\TrekkShare.Data.csproj", "{65BC3842-098E-4ADF-B0AF-29029119355C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrekkShare.Data", "TrekkShare.Data\TrekkShare.Data.csproj", "{65BC3842-098E-4ADF-B0AF-29029119355C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrekkShare.Services", "TrekkShare.Services\TrekkShare.Services.csproj", "{E95F4321-184E-47CF-B213-EABDD8C52395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrekkShare.Services", "TrekkShare.Services\TrekkShare.Services.csproj", "{E95F4321-184E-47CF-B213-EABDD8C52395}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -31,6 +31,7 @@
         public ICollection<RiverCountry> RiverCountries { get; set; }
         public ICollection<MountainRiver> MountainRivers { get; set; }
         public ICollection<Waterfall> Waterfalls { get; set; }
+        public ICollection<DamRiver> DamRivers { get; set; }
         //OPTIONAL: kayak trips, boat trips
     }
 }

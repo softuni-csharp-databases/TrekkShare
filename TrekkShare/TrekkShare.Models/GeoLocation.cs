@@ -24,5 +24,6 @@ namespace TrekkShare.Models
         public ICollection<Cottage> Cottages { get; set; }
         public ICollection<Peak> Peaks { get; set; }
         public ICollection<Route> Routes { get; set; }
+        public ICollection<Dam> Dams { get; set; }
     }
 }
