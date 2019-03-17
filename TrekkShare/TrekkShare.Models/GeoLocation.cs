@@ -16,6 +16,7 @@ namespace TrekkShare.Models
             this.EndPointRoutes = new HashSet<Route>();
             this.StartPointTrips = new HashSet<Trip>();
             this.EndPointTrips = new HashSet<Trip>();
+            this.Dams = new HashSet<Dam>();
         }
 
         public int GeoLocationId { get; set; }
@@ -30,5 +31,6 @@ namespace TrekkShare.Models
         public ICollection<Route> EndPointRoutes { get; set; }
         public ICollection<Trip> StartPointTrips { get; set; }
         public ICollection<Trip> EndPointTrips { get; set; }
+        public ICollection<Dam> Dams { get; set; }
     }
 }

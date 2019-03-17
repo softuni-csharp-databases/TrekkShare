@@ -21,6 +21,8 @@ namespace TrekkShare.Data
         public DbSet<Cave> Caves { get; set; }
         public DbSet<Cottage> Cottages { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<Dam> Dams { get; set; }
+        public DbSet<DamRiver> DamRivers { get; set; }
         public DbSet<GeoLocation> GeoLocations { get; set; }
         public DbSet<Lake> Lakes { get; set; }
         public DbSet<Monastery> Monasteries { get; set; }
@@ -58,6 +60,8 @@ namespace TrekkShare.Data
             modelBuilder.ApplyConfiguration(new CaveConfig());
             modelBuilder.ApplyConfiguration(new CottageConfig());
             modelBuilder.ApplyConfiguration(new CountryConfig());
+            modelBuilder.ApplyConfiguration(new DamConfig());
+            modelBuilder.ApplyConfiguration(new DamRiverConfig());
             modelBuilder.ApplyConfiguration(new LakeConfig());   
             modelBuilder.ApplyConfiguration(new MountainConfig());
             modelBuilder.ApplyConfiguration(new MountainRiverConfig());
