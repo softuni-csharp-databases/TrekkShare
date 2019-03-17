@@ -23,13 +23,16 @@ namespace TrekkShare.Data
         public DbSet<Country> Countries { get; set; }
         public DbSet<GeoLocation> GeoLocations { get; set; }
         public DbSet<Lake> Lakes { get; set; }
+        public DbSet<Monastery> Monasteries { get; set; }
         public DbSet<Mountain> Mountains { get; set; }
+        public DbSet<MountainRiver> MountainRivers { get; set; }
         public DbSet<Municipality> Municipalities { get; set; }
         public DbSet<Peak> Peaks { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<River> Rivers { get; set; }
         public DbSet<RiverCountry> RiverCountries { get; set; }
         public DbSet<Route> Routes { get; set; }
+        public DbSet<RouteMountain> RouteMountains { get; set; }
         public DbSet<Tourist> Tourists { get; set; }
         public DbSet<TouristTrip> TouristTrips { get; set; }
         public DbSet<Town> Towns { get; set; }
@@ -50,22 +53,28 @@ namespace TrekkShare.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //missing MonasteryConfig, GeoLocationConfig
+            modelBuilder.ApplyConfiguration(new AddressConfig());
             modelBuilder.ApplyConfiguration(new CaveConfig());
+            modelBuilder.ApplyConfiguration(new CottageConfig());
             modelBuilder.ApplyConfiguration(new CountryConfig());
+            modelBuilder.ApplyConfiguration(new LakeConfig());   
             modelBuilder.ApplyConfiguration(new MountainConfig());
             modelBuilder.ApplyConfiguration(new MountainRiverConfig());
             modelBuilder.ApplyConfiguration(new MunicipalityConfig());
             modelBuilder.ApplyConfiguration(new PeakConfig());
+            modelBuilder.ApplyConfiguration(new ProvinceConfig());
             modelBuilder.ApplyConfiguration(new RiverConfig());
             modelBuilder.ApplyConfiguration(new RiverCountryConfig());
             modelBuilder.ApplyConfiguration(new RouteConfig());
             modelBuilder.ApplyConfiguration(new RouteMountainConfig());
+            modelBuilder.ApplyConfiguration(new TouristConfig());
             modelBuilder.ApplyConfiguration(new TouristTripConfig());
             modelBuilder.ApplyConfiguration(new TownConfig());
             modelBuilder.ApplyConfiguration(new TransportConfig());
+            modelBuilder.ApplyConfiguration(new TripConfig());
             modelBuilder.ApplyConfiguration(new UserConfig());
             modelBuilder.ApplyConfiguration(new WaterfallConfig());
-            modelBuilder.ApplyConfiguration(new LakeConfig());
         }
     }
 }
