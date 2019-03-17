@@ -14,34 +14,24 @@
                 .HasForeignKey<Tourist>(u => u.UserId);
 
             builder.Property(u => u.Username)
-                .HasColumnType("VARCHAR(30)")
                 .HasMaxLength(30)
-                .IsRequired()
-                .IsUnicode();
+                .IsRequired();
 
             builder.Property(u => u.FirstName)
-                .HasColumnType("VARCHAR(40)")
                 .HasMaxLength(40)
-                .IsRequired()
-                .IsUnicode();
+                .IsRequired();
 
             builder.Property(u => u.MiddleName)
-                .HasColumnType("VARCHAR(30)")
                 .HasMaxLength(30)
-                .IsRequired(false)
-                .IsUnicode();
+                .IsRequired(false);
 
             builder.Property(u => u.LastName)
-                .HasColumnType("VARCHAR(40)")
                 .HasMaxLength(40)
-                .IsRequired()
-                .IsUnicode();
+                .IsRequired();
 
             builder.Property(e => e.Email)
-                .HasColumnType("VARCHAR(60)")
                 .HasMaxLength(60)
-                .IsRequired()
-                .IsUnicode();
+                .IsRequired();
 
             builder.Property(p => p.Phone)
                 .HasMaxLength(30);
