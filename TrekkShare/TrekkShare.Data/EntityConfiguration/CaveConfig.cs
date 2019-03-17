@@ -13,7 +13,6 @@ namespace TrekkShare.Data.EntityConfiguration
 
             builder
                 .Property(c => c.Name)
-                .HasColumnType("NVARCHAR(50)")
                 .HasMaxLength(50)
                 .IsRequired()
                 .IsUnicode();
