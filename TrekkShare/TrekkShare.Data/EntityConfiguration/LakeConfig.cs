@@ -22,7 +22,12 @@
                 .WithMany(m => m.Lakes)
                 .HasForeignKey(l => l.MountainId);
 
-            //TODO: Add relation to GeoLocation
+            
+            builder
+                .HasOne(l => l.GeoLocation)
+                .WithMany(g => g.Lakes)
+                .HasForeignKey(l => l.GeoLocationId);
+
         }
     }
 }
