@@ -2,6 +2,7 @@ namespace TrekkShare.Data.EntityConfiguration
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
     using Models;
 
     public class CaveConfig : IEntityTypeConfiguration<Cave>

@@ -2,7 +2,8 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using TrekkShare.Models;
+
+    using Models;
 
     public class ProvinceConfig : IEntityTypeConfiguration<Province>
     {

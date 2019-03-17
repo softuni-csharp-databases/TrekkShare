@@ -7,7 +7,6 @@ namespace TrekkShare.Data.EntityConfiguration
 
     public class RouteConfig : IEntityTypeConfiguration<Route>
     {
-
         public void Configure(EntityTypeBuilder<Route> builder)
         {
             builder.HasKey(x => x.RouteId);
@@ -24,7 +23,6 @@ namespace TrekkShare.Data.EntityConfiguration
                 .HasMaxLength(30)
                 .IsRequired(true)
                 .IsUnicode(true);
-
         }
     }
 }

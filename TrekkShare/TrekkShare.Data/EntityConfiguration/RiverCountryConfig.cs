@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TrekkShare.Models;
-
-namespace TrekkShare.Data.EntityConfiguration
+﻿namespace TrekkShare.Data.EntityConfiguration
 {
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+    using Models;
+
     public class RiverCountryConfig : IEntityTypeConfiguration<RiverCountry>
     {
         public void Configure(EntityTypeBuilder<RiverCountry> builder)

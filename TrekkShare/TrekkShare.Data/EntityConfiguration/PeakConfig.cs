@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TrekkShare.Models;
-
-namespace TrekkShare.Data.EntityConfiguration
+﻿namespace TrekkShare.Data.EntityConfiguration
 {
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+    using Models;
+
     public class PeakConfig : IEntityTypeConfiguration<Peak>
     {
         public void Configure(EntityTypeBuilder<Peak> builder)

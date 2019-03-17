@@ -1,8 +1,9 @@
 ﻿namespace TrekkShare.Data.EntityConfiguration
 {
-    using Models;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+    using Models;
 
     public class WaterfallConfig : IEntityTypeConfiguration<Waterfall>
     {
