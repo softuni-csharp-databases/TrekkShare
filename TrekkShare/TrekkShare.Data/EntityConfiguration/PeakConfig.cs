@@ -25,6 +25,12 @@ namespace TrekkShare.Data.EntityConfiguration
                 .WithMany(p => p.Peaks)
                 .HasForeignKey(p => p.PeakId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder
+                .HasOne(p => p.GeoLocation)
+                .WithMany(p => p.Peaks)
+                .HasForeignKey(p => p.GeoLocationId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
