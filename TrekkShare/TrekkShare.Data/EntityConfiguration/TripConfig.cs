@@ -15,6 +15,16 @@ namespace TrekkShare.Data.EntityConfiguration
                 .WithMany(x => x.Trips)
                 .HasForeignKey(x => x.RouteId);
 
+            builder.HasOne(x => x.StartPoint)
+                .WithMany(x => x.StartPointTrips)
+                .HasForeignKey(x => x.StartPointId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(x => x.EndPoint)
+                .WithMany(x => x.EndPointTrips)
+                .HasForeignKey(x => x.EndPointId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             // TODO relation with Geo points and Cottage.
         }
     }

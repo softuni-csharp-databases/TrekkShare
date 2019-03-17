@@ -26,7 +26,6 @@ namespace TrekkShare.Models
 
         public EquipmentLevel RecommendedEquipmentLevel { get; set; }
 
-
         public int StartPointId { get; set; }
         public GeoLocation StartPoint { get; set; }
 
