@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Configuration.cs" />
     <Compile Remove="Migrations\20190310121635_initialLocalDb.cs" />
     <Compile Remove="Migrations\20190310121855_initialLocalDb.cs" />
   </ItemGroup>
