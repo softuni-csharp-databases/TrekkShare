@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TrekkShare.Data\TrekkShare.Data.csproj" />
     <ProjectReference Include="..\TrekkShare.Services\TrekkShare.Services.csproj" />
   </ItemGroup>
