@@ -12,13 +12,16 @@
             builder.HasKey(c => c.CottageId);
 
             builder.Property(c => c.Name)
-                .IsUnicode();
+                .IsUnicode()
+                .IsRequired();
 
             builder.HasOne(c => c.Mountain)
                 .WithMany(m => m.Cottages)
                 .HasForeignKey(c => c.MountainId);
 
-            //TODO: Add relation to GeoLocation
+            builder.HasOne(cottage => cottage.GeoLocation)
+                .WithMany(geoLocation => geoLocation.Cottages)
+                .HasForeignKey(cottage=>cottage.GeoLocationId);
         }
     }
 }

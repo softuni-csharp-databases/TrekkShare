@@ -7,7 +7,7 @@
     {
         public int CottageId { get; set; }
 
-        [Required]
+    
         public string Name { get; set; }
 
         public int Capacity { get; set; }
@@ -16,6 +16,6 @@
         public Mountain Mountain { get; set; }
 
         public int GeoLocationId { get; set; }
-        public Point GeoLocation { get; set; }
+        public GeoLocation GeoLocation { get; set; }
     }
 }
