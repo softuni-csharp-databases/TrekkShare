@@ -9,8 +9,11 @@
         {
             this.Waterfalls = new HashSet<Waterfall>();
             this.RiverCountries = new HashSet<RiverCountry>();
+            this.MountainRivers = new HashSet<MountainRiver>();
+            this.Dams = new HashSet<DamRiver>();
         }
 
+        [Key]
         public int RiverId { get; set; }
 
         [Required]
