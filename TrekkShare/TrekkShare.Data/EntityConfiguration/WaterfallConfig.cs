@@ -21,11 +21,13 @@
                 .IsUnicode();
 
             builder.Property(w => w.Description)
-                .HasMaxLength(400);
+                .HasMaxLength(400)
+                .IsUnicode();
 
             builder.HasOne(w => w.River)
                 .WithMany(r => r.Waterfalls)
-                .HasForeignKey(w => w.RiverId);
+                .HasForeignKey(w => w.RiverId)
+                .OnDelete(DeleteBehavior.Restrict); ;
         }
     }
 }

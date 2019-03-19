@@ -20,12 +20,12 @@
         public int? Height { get; set; }
 
         /// <summary>
-        /// meter / Represents the currentWaterfall height
+        /// meter / Represents the currentWaterfall width
         /// </summary>
         public int? Width { get; set; }
 
         /// <summary>
-        /// liter per second / Represent the the volume of water passing over the waterfall
+        /// liter per second / Represent the volume of water passing over the waterfall
         /// </summary>
         public int? FlowRate { get; set; }
 
