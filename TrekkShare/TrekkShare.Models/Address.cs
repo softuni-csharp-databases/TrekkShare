@@ -11,11 +11,10 @@
             this.Users = new HashSet<User>();
         }
 
-        [Key]
+      
         public int AddressId { get; set; }
 
-        [Required]
-        [Column(TypeName = "nvarchar(300)")]
+       
         public string Text { get; set; }
 
         public int TownId { get; set; }

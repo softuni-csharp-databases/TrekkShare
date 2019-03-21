@@ -10,7 +10,9 @@
         public void Configure(EntityTypeBuilder<Address> builder)
         {
             builder.HasKey(a => a.AddressId);
-
+            builder.Property(x => x.Text)
+                .HasMaxLength(300)
+                .IsRequired();
             builder.HasOne(a => a.Town)
                 .WithMany(t => t.Addresses)
                 .HasForeignKey(a => a.TownId);
