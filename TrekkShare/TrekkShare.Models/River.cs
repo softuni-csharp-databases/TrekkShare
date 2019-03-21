@@ -17,6 +17,7 @@
         public int RiverId { get; set; }
 
         [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
 
         public int Length { get; set; }
