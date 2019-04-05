@@ -9,7 +9,11 @@
     {
         public void Configure(EntityTypeBuilder<River> builder)
         {
-           
+           builder.HasKey(r=>r.RiverId);
+
+            builder.Property(r=>r.Name)
+                .HasMaxLength(50)
+                .IsRequired();
         }
     }
 }
